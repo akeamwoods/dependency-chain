@@ -15,9 +15,11 @@ export const Wrapper = styled.div`
     margin: 0;
   }
   button {
-    margin: 20px;
+    width: 100%;
+    margin-top: 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     padding: 5px 10px;
     background: #fff;
@@ -42,14 +44,16 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const FileInfoContainer = styled.span`
+export const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  svg {
-    height: 22px;
-    width: 22px;
+  color: #fff;
+  img {
     margin-right: 10px;
   }
-  margin: 2px;
+  h1 {
+    font-size: 1.7em;
+    margin: 0;
+  }
 `;

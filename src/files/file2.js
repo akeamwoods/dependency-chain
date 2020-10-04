@@ -1,7 +1,7 @@
 export const file2 = () => {
   return new Promise((res) => {
     setTimeout(() => {
-      alert("file 2 finished");
+      console.log("file 2 finished");
       res();
     }, 1000);
   });

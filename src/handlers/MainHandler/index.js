@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Logo } from "./../../components/logo";
-import { FaFileCode, FaCheckCircle, FaTimesCircle } from "react-icons/fa";
-import { Wrapper, FileInfoContainer } from "./style";
+import { FaFileCode } from "react-icons/fa";
+import { FileDisplay } from "./../../components/FileDisplay";
+import { Wrapper, LogoWrapper } from "./style";
 
 export const MainHandler = () => {
   const [isLoading, setLoading] = useState(false);
@@ -19,34 +19,32 @@ export const MainHandler = () => {
 
   return (
     <Wrapper>
-      <Logo />
+      <LogoWrapper>
+        <img
+          src={process.env.PUBLIC_URL + "/chain.svg"}
+          alt="logo"
+          height="30px"
+        />
+        <h1>Dependency Chain</h1>
+      </LogoWrapper>
       <h4>
         Clicking the button below will sequentially load/execute javascript
         files.
       </h4>
-      {files.map((file, index) => (
-        <FileInfoContainer>
-          {index + 1 < fileNumber ? (
-            <FaCheckCircle color="#8bc34a" />
-          ) : (
-            <FaTimesCircle />
-          )}
-          <p style={{ color: index + 1 < fileNumber ? "#8bc34a" : "#000" }}>
-            {file}
-          </p>
-        </FileInfoContainer>
-      ))}
-      <button
-        onClick={() => loadAndExecuteJS(fileNumber)}
-        disabled={fileNumber > files.length}
-      >
-        <FaFileCode size="24px" />
-        {`Load File ${fileNumber <= 5 ? fileNumber : 5}`}
-      </button>
-
-      {isLoading && (
-        <img src={process.env.PUBLIC_URL + "/loading.svg"} alt="logo" />
-      )}
+      <span>
+        <FileDisplay
+          files={files}
+          fileNumber={fileNumber}
+          isLoading={isLoading}
+        />
+        <button
+          onClick={() => loadAndExecuteJS(fileNumber)}
+          disabled={fileNumber > files.length || isLoading}
+        >
+          <FaFileCode size="24px" />
+          {fileNumber <= 5 ? `Load File ${fileNumber}` : "All files loaded"}
+        </button>
+      </span>
     </Wrapper>
   );
 };
