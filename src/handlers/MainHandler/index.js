@@ -5,16 +5,16 @@ import { Wrapper } from "./style";
 export const MainHandler = () => {
   const [isLoading, setLoading] = useState(false);
   const [fileNumber, setFileNumber] = useState(1);
-  const files = ["./../../files/file1.js", "./../../files/file2.js"];
+  const fileCount = 5;
 
-  async function main() {
-    if (fileNumber <= files.length) {
+  const loadAndExecuteJS = async (currentFile) => {
+    if (currentFile <= fileCount) {
       setLoading(true);
-      await (await import(`./../../files/file${fileNumber}.js`)).default();
+      await (await import(`./../../files/file${currentFile}.js`)).default();
       setLoading(false);
-      setFileNumber(fileNumber + 1);
+      setFileNumber(currentFile + 1);
     }
-  }
+  };
 
   return (
     <Wrapper>
@@ -23,7 +23,10 @@ export const MainHandler = () => {
         Clicking the button below will sequentially load/execute a series of
         javascript files.
       </p>
-      <button onClick={() => main()} disabled={fileNumber > files.length}>
+      <button
+        onClick={() => loadAndExecuteJS(fileNumber)}
+        disabled={fileNumber > fileCount}
+      >
         Load
       </button>
       {isLoading && (
