@@ -10,5 +10,6 @@ export const Wrapper = styled.div`
   }
   h1 {
     font-size: 1.7em;
+    margin: 0;
   }
 `;
