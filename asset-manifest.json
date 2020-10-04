@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/dependency-chain/static/css/main.f71b6779.chunk.css",
+    "main.js": "/dependency-chain/static/js/main.c8db5511.chunk.js",
+    "main.js.map": "/dependency-chain/static/js/main.c8db5511.chunk.js.map",
+    "runtime-main.js": "/dependency-chain/static/js/runtime-main.de878003.js",
+    "runtime-main.js.map": "/dependency-chain/static/js/runtime-main.de878003.js.map",
+    "static/js/2.2fbf8e62.chunk.js": "/dependency-chain/static/js/2.2fbf8e62.chunk.js",
+    "static/js/2.2fbf8e62.chunk.js.map": "/dependency-chain/static/js/2.2fbf8e62.chunk.js.map",
+    "static/js/3.08fcc884.chunk.js": "/dependency-chain/static/js/3.08fcc884.chunk.js",
+    "static/js/3.08fcc884.chunk.js.map": "/dependency-chain/static/js/3.08fcc884.chunk.js.map",
+    "static/js/4.9ec1b807.chunk.js": "/dependency-chain/static/js/4.9ec1b807.chunk.js",
+    "static/js/4.9ec1b807.chunk.js.map": "/dependency-chain/static/js/4.9ec1b807.chunk.js.map",
+    "index.html": "/dependency-chain/index.html",
+    "precache-manifest.372ccec7e68380b2e92b3e9ed623ff13.js": "/dependency-chain/precache-manifest.372ccec7e68380b2e92b3e9ed623ff13.js",
+    "service-worker.js": "/dependency-chain/service-worker.js",
+    "static/css/main.f71b6779.chunk.css.map": "/dependency-chain/static/css/main.f71b6779.chunk.css.map",
+    "static/js/2.2fbf8e62.chunk.js.LICENSE.txt": "/dependency-chain/static/js/2.2fbf8e62.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de878003.js",
+    "static/js/2.2fbf8e62.chunk.js",
+    "static/css/main.f71b6779.chunk.css",
+    "static/js/main.c8db5511.chunk.js"
+  ]
+}
